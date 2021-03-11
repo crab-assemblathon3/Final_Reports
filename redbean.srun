@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#SBATCH --account=bgmp
+#SBATCH --partition=longfat
+#SBATCH --cpus-per-task=54
+
+conda activate redbean
+/usr/bin/time -v wtdbg2 \
+	-x preset3 -g 7.2g -t 28 \
+	-i /projects/bgmp/shared/groups/2020_crab/group3/downsampled/m64047_190827_175934.subreads.fastq \
+	-i /projects/bgmp/shared/groups/2020_crab/group3/downsampled/m64047_201204_214048.subreads.fastq \
+	-i /projects/bgmp/shared/groups/2020_crab/group3/downsampled/m64047_201206_040637.subreads.fastq \
+	-i /projects/bgmp/shared/groups/2020_crab/group3/downsampled/m64047_201207_104522.subreads.fastq \
+	-i /projects/bgmp/shared/groups/2020_crab/group3/downsampled/m64047_201208_172424.subreads.fastq \
+	-fo group3 \
+	-L 5000 -A -S 2 -p 19 --rescue-low-cov-edges
