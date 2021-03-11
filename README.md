@@ -6,6 +6,10 @@
 
 ### Downsampling the ZMWs
 
+Down sampling was performed with the objective of sampling in a stochastic way, such that a particular subset of reads are not sampled with bias. To achieve this, the data files were shuffled before taking the first 75% of reads. The data percentage was calculated using the bit size of the file, such that the downsampled dataset encompassed 75% of the total starting sequence data.
+
+See DownSamplingReport.MD for more info. 
+
 ### Setting Up the Conda Environment
 
 conda create --name redbean  
