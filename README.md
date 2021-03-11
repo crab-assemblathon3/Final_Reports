@@ -1,4 +1,4 @@
-## King Crab genome assembly
+## King Crab Genome Assembly
 
 ### PacBio CLR data, downsampled to 75% ZMWs, assembled with wtdbg2
 
@@ -16,9 +16,9 @@ conda install -c bioconda wtdbg
 
 ### Running wtdbg2 (redbean)
 
-Usage: wtdbg2 [options] -i <reads.fa> -o <prefix> [reads.fa ...]  
+**Usage:** wtdbg2 [options] -i <reads.fa> -o <prefix> [reads.fa ...]  
   
-Options Used:  
+**Options Used:**  
 
 | short | type    | description                                                                                |
 | ----- | ------- | -------------------------------------------------------------------------------------------|
